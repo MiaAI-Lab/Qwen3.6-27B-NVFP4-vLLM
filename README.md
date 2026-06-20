@@ -218,20 +218,19 @@ The file [`chat_template.jinja`](chat_template.jinja) is a comprehensive Jinja2 
 ## 📁 Project Structure
 
 ```
-qwen3.6-27b/
+Qwen3.6-27B-NVFP4-vLLM/
 ├── README.md             ← This file
 ├── start.sh              ← Launch script (vLLM container)
-├── stop.sh               │ Stop & cleanup script
+├── stop.sh               ← Stop & cleanup script
 ├── chat_template.jinja   ← Custom Jinja chat template (v20)
-├── .vllm.log             ← Live container log (auto-created)
-├── .vllm.pid             ← Container ID file (auto-created)
-├── .bin/                 ├── gcc binary (bundled for ARM64)
-├── .cache/               ├── HuggingFace downloads
-│   └── huggingface/      └── Triton compilation cache
-├── .deps/                │ Python 3.12 dev .deb packages
-│   ├── libpython3.12-dev_...deb
-│   └── python3.12-dev_...deb
 └── .gitignore            ← Git ignore rules
+
+# Runtime artifacts (auto-created, gitignored):
+#   .vllm.log     — Live container log
+#   .vllm.pid     — Container ID file
+#   .cache/       — HuggingFace downloads + Triton cache
+#   .deps/        — Bundled Python dev .deb packages
+#   .bin/         — Bundled GCC binary (ARM64)
 ```
 
 ---
