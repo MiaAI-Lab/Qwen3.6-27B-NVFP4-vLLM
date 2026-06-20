@@ -1,5 +1,10 @@
 # Qwen3.6-27B (NVFP4) — Self-Hosted Inference via vLLM
 
+<a href="https://x.com/MiaAI_lab" target="_blank">
+  <img src="https://img.shields.io/badge/Follow%20me%20on%20X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Follow Mia on X" />
+</a>
+<a href='https://ko-fi.com/Z8Z3SPLOD' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 [![vLLM](https://img.shields.io/badge/vLLM-nightly-blue)](https://github.com/vllm-project/vllm)
 [![Model](https://img.shields.io/badge/model-Qwen3.6--27B-informational)](https://huggingface.co/unsloth/Qwen3.6-27B-NVFP4)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-lightgrey)](LICENSE)
