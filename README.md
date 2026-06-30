@@ -1,11 +1,11 @@
 # Qwen3.6-27B (NVFP4) — Self-Hosted Inference via vLLM
 
 [![vLLM](https://img.shields.io/badge/vLLM-nightly-blue)](https://github.com/vllm-project/vllm)
-[![Model](https://img.shields.io/badge/model-Qwen3.6--27B-informational)](https://huggingface.co/unsloth/Qwen3.6-27B-NVFP4)
+[![Model](https://img.shields.io/badge/model-Qwen3.6--27B-informational)](https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-lightgrey)](LICENSE)
 [![ARM64](https://img.shields.io/badge/arch-arm64-lightgrey)](#)
 
-A production-ready vLLM deployment wrapper for **[Qwen3.6-27B](https://huggingface.co/unsloth/Qwen3.6-27B-NVFP4)** — an FP4-quantized version of Qwen3.6.
+A production-ready vLLM deployment wrapper for **[Qwen3.6-27B](https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4)** — an FP4-quantized version of Qwen3.6.
 
 This repo bundles a ready-to-run Docker container, a custom chat template, and start/stop scripts so you can spin up a fully OpenAI-compatible inference server in minutes.
 
@@ -93,7 +93,7 @@ cd Qwen3.6-27B-NVFP4-vLLM
 
 ### 2. (Optional) Set HuggingFace Token
 
-If the model repo (`unsloth/Qwen3.6-27B-NVFP4`) requires authenticated access:
+If the model repo (`nvidia/Qwen3.6-27B-NVFP4`) requires authenticated access:
 
 ```bash
 export HF_TOKEN="hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -117,7 +117,7 @@ This will:
 
 **Expected output:**
 ```
-Starting vLLM container for unsloth/Qwen3.6-27B-NVFP4
+Starting vLLM container for nvidia/Qwen3.6-27B-NVFP4
 Image: vllm/vllm-openai:nightly
 Listening on 0.0.0.0:8888
 Writing progress to .vllm.log
@@ -136,7 +136,7 @@ curl http://0.0.0.0:8888/v1/models | jq
 curl -s http://0.0.0.0:8888/v1/chat/completions \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "unsloth/Qwen3.6-27B-NVFP4",
+    "model": "nvidia/Qwen3.6-27B-NVFP4",
     "messages": [{"role": "user", "content": "Explain quantization in one sentence."}],
     "temperature": 0.6,
     "top_p": 0.95,
@@ -163,7 +163,7 @@ All configurable options live in [`start.sh`](start.sh). Key variables:
 
 | Variable | Default | Description |
 |---|---|---|
-| `MODEL_ID` | `unsloth/Qwen3.6-27B-NVFP4` | HuggingFace model identifier |
+| `MODEL_ID` | `nvidia/Qwen3.6-27B-NVFP4` | HuggingFace model identifier |
 | `IMAGE` | `vllm/vllm-openai:nightly` | vLLM Docker image tag |
 | `CONTAINER_NAME` | `qwen3.6-27b-nvfp4-vllm` | Docker container name |
 | `HOST` | `0.0.0.0` | Bind address |
@@ -284,7 +284,7 @@ Qwen3.6-27B-NVFP4-vLLM/
 
 ## 📝 License
 
-- **Model weights:** Refer to the [HuggingFace repo](https://huggingface.co/unsloth/Qwen3.6-27B-NVFP4) for licensing details
+- **Model weights:** Refer to the [HuggingFace repo](https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4) for licensing details
 - **This codebase:** MIT License (or adjust as needed)
 
 ---
@@ -292,7 +292,7 @@ Qwen3.6-27B-NVFP4-vLLM/
 ## 📚 Resources
 
 - [vLLM Documentation](https://docs.vllm.ai/)
-- [Qwen3.6 on HuggingFace](https://huggingface.co/unsloth/Qwen3.6-27B-NVFP4)
+- [Qwen3.6 on HuggingFace](https://huggingface.co/nvidia/Qwen3.6-27B-NVFP4)
 - [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
 - [FlashInfer](https://github.com/flashinfer-ai/flashinfer)
 - [Marlin MoE](https://github.com/IST-DASLab/marlin)
