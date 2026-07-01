@@ -2,7 +2,7 @@
 set -euo pipefail
 
 MODEL_ID="nvidia/Qwen3.6-27B-NVFP4"
-IMAGE="vllm/vllm-openai:nightly"
+IMAGE="vllm/vllm-openai:v0.24.0"
 CONTAINER_NAME="qwen3.6-27b-nvfp4-vllm"
 HOST="0.0.0.0"
 PORT="8888"
